@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import sk.meski.antibot.AntiBotVerification;
 import sk.meski.tickets.TicketListeners;
 import sk.meski.verify.VerifyListener;
 
@@ -25,6 +26,7 @@ public class Main {
 
         jda.addEventListener(new TicketListeners());
         jda.addEventListener(new VerifyListener());
+        jda.addEventListener(new AntiBotVerification());
 
     }
 

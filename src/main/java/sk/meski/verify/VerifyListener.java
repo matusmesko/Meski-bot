@@ -26,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VerifyListener extends ListenerAdapter {
+
+    // Setup command
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
         String[] args = event.getMessage().getContentDisplay().split(" ");
@@ -49,6 +51,7 @@ public class VerifyListener extends ListenerAdapter {
         }
     }
 
+    //String menu event
     @Override
     public void onStringSelectInteraction(StringSelectInteractionEvent event) {
         if (event.getComponentId().equals("verifyMenu")) {
@@ -60,6 +63,7 @@ public class VerifyListener extends ListenerAdapter {
         }
     }
 
+    // Modal object
     public Modal verifyModal() {
         TextInput nick = TextInput.create("nick", "Nickname", TextInputStyle.SHORT)
                 .setPlaceholder("Your ingame nickname")
@@ -88,6 +92,8 @@ public class VerifyListener extends ListenerAdapter {
         return modal;
     }
 
+
+    // Modal event
     @Override
     public void onModalInteraction(ModalInteractionEvent event) {
         TextChannel textChannel = event.getGuild().getTextChannelById("1126244000047833169");
