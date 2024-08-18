@@ -17,7 +17,7 @@ public class Main {
 
 
     public static void main(String[] args) throws InterruptedException{
-        String botToken = "MTEyNTkzMDc3OTE5MzY1NTUwNg.GQQvc-.Z6mRzDAgG7KPdwHljUeuKWO01fqSHGBOaTtvLw";
+        String botToken = "";
         jda = JDABuilder.createDefault(botToken)
                 .setStatus(OnlineStatus.ONLINE)
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
